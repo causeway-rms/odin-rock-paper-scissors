@@ -1,7 +1,16 @@
 const gameOptions = ['rock', 'paper', 'scissors'];
-let computerChoice;
+
+let computerSelection;
+let userSelection;
+
 function getComputerChoice() {
-    computerChoice = gameOptions[Math.floor(Math.random()*3)];
-    return computerChoice;
+    computerSelection = gameOptions[Math.floor(Math.random()*3)];
+    return computerSelection;
 }
-console.log(getComputerChoice());
+
+function getUserChoice() {
+    userSelection = prompt('Enter your choice: rock, paper, or scissors')
+    return userSelection;
+}
+
+console.log(getUserChoice());
