@@ -72,4 +72,21 @@ function singleRound(humanChoice, computerChoice) {
     }
     }
 
-console.log(singleRound(getUserChoice(),getComputerChoice()));
+    function game() {
+        for (i = 0; i < 5; i++) {
+            console.log('Round ' + (i+1));
+            console.log(singleRound(getUserChoice(),getComputerChoice()));
+            console.log('Current Score: You - ' + humanScore + ' | Computer - ' + computerScore);
+        }
+        if (humanScore > computerScore) {
+            console.log('RESULT: You win the match! Score: ' + humanScore + '-' + computerScore);
+        }
+        else if (computerScore > humanScore) {
+            console.log('RESULT: Computer wins the match! Score: ' + computerScore + '-' + humanScore);
+        }
+        else {
+            console.log('RESULT: The match is tied! Final Score: ' + humanScore + '-' + computerScore);
+        }
+    }
+
+    game()
